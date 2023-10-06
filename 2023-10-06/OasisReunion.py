@@ -24,7 +24,6 @@ for v in line:
 
   # 다음 사람이 나보다 키가 큰 경우
   while stack and stack[-1][0] < v:
-    print(*stack)
     count += stack.pop()[1]
 
   if not stack:
@@ -39,8 +38,6 @@ for v in line:
     stack.append((v, cnt+1))
   # 상대방과 크기가 다른 경우
   else:
-    print('크기가 다릅니다.')
     stack.append((v,1))
-    print(*stack)
     count +=1
 print(count)
